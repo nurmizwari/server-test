@@ -6,8 +6,10 @@ const app = express();
 const port = 3005;
 const cors = require("cors");
 const router = require("./router");
+const path = require("path");
 
 app.use(cors());
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

@@ -20,6 +20,5 @@ async function authorizationAdmin(req, res, next) {
     console.log(error);
   }
 }
-//! baca dulu data yang ingin diubah
-//! apakah authorId sesuai dengan yang login
+
 module.exports = authorizationAdmin;
