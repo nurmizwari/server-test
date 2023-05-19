@@ -1,8 +1,9 @@
 const { User } = require("../models");
 
 async function authorizationAdmin(req, res, next) {
-  console.log(req.user);
+  console.log(req.user, "req.user dari authz");
   try {
+    console.log(req.user.id, "id user");
     let data = await User.findByPk(req.user.id);
     console.log(data, "data");
     if (!data) {
